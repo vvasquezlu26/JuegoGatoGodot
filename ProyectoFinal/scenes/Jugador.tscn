@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://paxbasuxb30d"]
+
+[ext_resource type="Script" uid="uid://slqmy4kdq5ek" path="res://ProyectoFinal/scripts/Jugador.gd" id="1_nmtsd"]
+[ext_resource type="PackedScene" path="res://assets/perro/animations.fbx" id="2_nmtsd"]
+[ext_resource type="Script" uid="uid://dqca417frdk4k" path="res://ProyectoFinal/scripts/Camera1.gd" id="3_p4kgv"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bkejx"]
+radius = 1.1450195
+height = 3.088623
+
+[sub_resource type="LabelSettings" id="LabelSettings_n7ifo"]
+font_size = 56
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=822700781 groups=["jugador"]]
+script = ExtResource("1_nmtsd")
+
+[node name="animations" parent="." unique_id=1125176049 instance=ExtResource("2_nmtsd")]
+transform = Transform3D(-52.533062, 0, 0.45111433, 0, 52.535, 0, -0.45111433, 0, -52.533062, -0.3469208, 0.33154678, 0)
+
+[node name="Skeleton3D" parent="animations/Armature" parent_id_path=PackedInt32Array(1125176049, 1090708201) index="0" unique_id=2058956418]
+bones/0/position = Vector3(3.4183264e-05, 0.009354399, -0.0010101758)
+bones/0/rotation = Quaternion(0.13212182, -0.019132322, 0.0014349631, 0.9910478)
+bones/1/rotation = Quaternion(0.16889055, 0.009156363, -0.007736586, 0.98556197)
+bones/2/rotation = Quaternion(0.07724523, 0.009932002, -0.0021239046, 0.9969604)
+bones/3/rotation = Quaternion(0.07732886, 0.009252932, -0.002231208, 0.9969602)
+bones/4/rotation = Quaternion(-0.16871262, 0.0053472626, -0.0030876542, 0.98564595)
+bones/5/rotation = Quaternion(-0.36831886, 0.02567569, -0.025266452, 0.9290014)
+bones/8/rotation = Quaternion(0.6024557, 0.4054288, -0.5288031, 0.4393653)
+bones/9/rotation = Quaternion(0.3267472, -0.010398379, 0.34866247, 0.87838644)
+bones/10/rotation = Quaternion(-0.13266407, -0.0053598364, 0.8057602, 0.57716733)
+bones/11/rotation = Quaternion(-0.06335084, 0.031267025, -0.14954388, 0.98622805)
+bones/12/rotation = Quaternion(0.12549043, -0.0014573378, 0.004074796, 0.99208546)
+bones/13/rotation = Quaternion(0.23638117, 0.0004774764, 0.0023814114, 0.9716574)
+bones/14/rotation = Quaternion(-0.105562106, 2.9481833e-05, 0.0012803471, 0.9944119)
+bones/17/rotation = Quaternion(0.515748, -0.4775343, 0.54461783, 0.45755482)
+bones/18/rotation = Quaternion(0.39214835, -0.01057087, -0.33679944, 0.85596377)
+bones/19/rotation = Quaternion(-0.11574488, 0.0017376132, -0.8272538, 0.5497739)
+bones/20/rotation = Quaternion(-0.032214247, -0.019027831, 0.18153214, 0.982673)
+bones/21/rotation = Quaternion(0.13173926, -0.00028011808, -0.0018313519, 0.9912827)
+bones/22/rotation = Quaternion(0.35531944, 0.002967551, -0.017551946, 0.93457544)
+bones/23/rotation = Quaternion(-0.027375108, -0.0042287703, -0.023729468, 0.9993347)
+bones/26/rotation = Quaternion(0.130088, 0.28003967, 0.9445769, -0.11148754)
+bones/27/rotation = Quaternion(-0.48754624, -0.035394337, -0.05494781, 0.8706473)
+bones/28/rotation = Quaternion(0.63368446, -0.28121984, -0.03764918, 0.71968186)
+bones/29/rotation = Quaternion(0.3488825, 0.032310203, -0.012062865, 0.93653166)
+bones/32/rotation = Quaternion(-0.23447555, 0.26073164, 0.93486494, 0.055388678)
+bones/33/rotation = Quaternion(-0.49355724, 0.017165424, -0.0509215, 0.86805165)
+bones/34/rotation = Quaternion(0.6470187, 0.25996932, 0.10398312, 0.7092041)
+bones/35/rotation = Quaternion(0.35357878, -0.02754024, 0.01041545, 0.93494123)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1376135783]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16071796, 1.5093588, 0)
+shape = SubResource("CapsuleShape3D_bkejx")
+
+[node name="pivot" type="Node3D" parent="." unique_id=1546305113 groups=["jugador"]]
+transform = Transform3D(1, 0, 0, 0, 0.9726465, 0.23229119, 0, -0.23229119, 0.9726465, -0.32324052, 2.96246, 2.1365993)
+script = ExtResource("3_p4kgv")
+
+[node name="Camera3D" type="Camera3D" parent="pivot" unique_id=227138906]
+transform = Transform3D(0.9942036, 0.04128229, -0.09927201, -0.024757192, 0.98643595, 0.16226774, 0.10462426, -0.15886948, 0.98174024, 0, 0, 0)
+
+[node name="pivot2" type="Node3D" parent="." unique_id=808963578 groups=["jugador"]]
+transform = Transform3D(1, 0, 0, 0, 0.9726465, 0.23229119, 0, -0.23229119, 0.9726465, -0.32324052, 2.96246, 2.1365993)
+script = ExtResource("3_p4kgv")
+
+[node name="Camera3D" type="Camera3D" parent="pivot2" unique_id=2110670433]
+transform = Transform3D(0.9942037, 0.041282278, -0.09927199, 0.0072227065, 0.89561266, 0.44477576, 0.1072706, -0.44291466, 0.89012307, 0, 0, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1108203955]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=758184543]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=782090782]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Coins"
+label_settings = SubResource("LabelSettings_n7ifo")
+
+[editable path="animations"]

@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://ujvnltwei5vr"]
+
+[ext_resource type="Script" uid="uid://dxtlftg06qeyx" path="res://ProyectoFinal/scripts/Perro.gd" id="1_huu3x"]
+[ext_resource type="PackedScene" uid="uid://ch7dcx7sda3v7" path="res://assets/perro/Perro1.fbx" id="2_erl4o"]
+[ext_resource type="Texture2D" uid="uid://diajkkas5bidr" path="res://assets/Gato/textures/T_NPC_Cat_D.png" id="3_erl4o"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hmx28"]
+albedo_texture = ExtResource("3_erl4o")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_huu3x"]
+size = Vector3(1, 0.49682617, 1)
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=448546898]
+script = ExtResource("1_huu3x")
+
+[node name="Perro1" parent="." unique_id=1024811378 instance=ExtResource("2_erl4o")]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Perro1/animated low poly dog game ready/Object_4" parent_id_path=PackedInt32Array(1024811378, 1033505175) index="2" unique_id=1716112499]
+bones/2/rotation = Quaternion(-0.707106, 1.6032798e-06, -1.4956314e-06, 0.70710754)
+bones/3/position = Vector3(0.1498888, 0.007084606, 2.9205978e-07)
+bones/3/rotation = Quaternion(-3.166205e-06, -3.0623014e-06, 0.04401749, 0.99903077)
+bones/4/position = Vector3(0.38012245, -0.00034262062, 3.982151e-07)
+bones/4/rotation = Quaternion(1.5505671e-07, 4.942811e-07, -0.1305261, 0.9914449)
+bones/5/position = Vector3(0.44498336, -0.00014842034, 5.8938093e-07)
+bones/5/rotation = Quaternion(6.7804467e-07, 9.119543e-07, -0.08715638, 0.9961947)
+bones/6/position = Vector3(0.18888403, -0.0001022339, 5.541587e-07)
+bones/6/rotation = Quaternion(-8.0717655e-12, 3.1685943e-08, 1.1622906e-06, 1)
+bones/7/rotation = Quaternion(8.243574e-07, 2.0035636e-06, -0.573904, 0.8189227)
+bones/8/position = Vector3(0.3172418, 1.7881393e-07, 4.0542727e-07)
+bones/8/rotation = Quaternion(1.19209275e-07, -4.768371e-07, 2.3841855e-07, 1)
+bones/10/position = Vector3(-0.116142154, -0.070257515, 0.10842815)
+bones/10/rotation = Quaternion(0.70444053, 0.061348118, 0.70444053, -0.061348166)
+bones/11/position = Vector3(0.0794231, -2.0861626e-06, 3.0398369e-06)
+bones/11/rotation = Quaternion(0.44303843, -0.5481799, 0.45412272, -0.5449665)
+bones/12/rotation = Quaternion(-3.5168512e-07, 8.638916e-07, -0.3003201, 0.9538385)
+bones/13/rotation = Quaternion(-0.62946576, 0.3179237, -0.32880944, 0.62815756)
+bones/15/position = Vector3(-0.11614138, -0.07025695, -0.10842933)
+bones/15/rotation = Quaternion(0.70444256, 0.06134797, -0.7044385, 0.06134834)
+bones/16/position = Vector3(0.07941732, -2.6226044e-06, 2.9206276e-06)
+bones/16/rotation = Quaternion(0.3299063, -0.6230579, -0.34354657, 0.6204325)
+bones/17/rotation = Quaternion(5.7536437e-07, -1.7805672e-06, -0.26065177, 0.96543294)
+bones/18/rotation = Quaternion(0.5297963, -0.46674314, -0.4668945, 0.532425)
+bones/20/position = Vector3(-0.14993033, 0.0061243777, 0.1818545)
+bones/20/rotation = Quaternion(0.8081998, 0.5889084, -2.6131962e-05, -1.8904457e-05)
+bones/21/rotation = Quaternion(8.2506665e-07, 5.314813e-07, -0.5479846, 0.83648854)
+bones/22/rotation = Quaternion(-9.3710844e-07, -3.0319563e-07, 0.41482013, 0.90990347)
+bones/23/rotation = Quaternion(-3.2179298e-05, 3.8169915e-06, 0.040537696, 0.9991781)
+bones/24/position = Vector3(0.08758588, 0.13321453, -7.4505806e-08)
+bones/24/rotation = Quaternion(4.1723246e-07, -2.1313753e-07, 0.7071067, 0.7071069)
+bones/25/position = Vector3(0.009163852, 7.657158e-08, -2.5093655e-08)
+bones/25/rotation = Quaternion(1.249731e-08, 2.0319753e-10, 1, 0)
+bones/27/position = Vector3(-0.14993185, 0.0061263693, -0.18185331)
+bones/27/rotation = Quaternion(0.6045987, 0.79653025, 2.889694e-05, 1.699016e-05)
+bones/28/rotation = Quaternion(1.4070772e-08, 3.6337158e-07, -0.24364504, 0.9698645)
+bones/29/rotation = Quaternion(-2.6970866e-08, -6.5259263e-07, 0.37624663, 0.9265196)
+bones/30/rotation = Quaternion(3.0375808e-05, -1.1853441e-05, 0.040537443, 0.9991781)
+bones/31/position = Vector3(0.08758579, 0.13321453, 4.4703484e-08)
+bones/31/rotation = Quaternion(3.874302e-07, -1.6924254e-07, 0.7071067, 0.7071068)
+bones/32/position = Vector3(0.009163859, -2.545903e-09, 1.01045465e-08)
+bones/34/position = Vector3(-0.35722014, -0.09973856, 2.6170073e-07)
+bones/34/rotation = Quaternion(9.654557e-07, -3.238075e-06, 0.9712071, 0.23823714)
+bones/35/position = Vector3(0.17481245, -0.0002620697, -2.4482787e-07)
+bones/35/rotation = Quaternion(-3.589523e-08, -3.3312574e-07, 0.10830306, 0.99411803)
+bones/36/position = Vector3(0.33719957, -0.00025110244, -4.9331624e-07)
+bones/36/rotation = Quaternion(-1.8883808e-08, -2.135784e-07, 0.108305484, 0.9941177)
+bones/37/position = Vector3(0.32398653, -4.172325e-07, -5.482692e-07)
+bones/37/rotation = Quaternion(-0.70738876, -0.7068248, -3.2782557e-07, 1.463108e-06)
+
+[node name="Bip001 Footsteps" parent="Perro1/animated low poly dog game ready/Object_4/Skeleton3D" index="0" unique_id=930722561]
+transform = Transform3D(3.422855e-08, 0.9999999, 3.5527135e-15, -0.9999998, 3.4228552e-08, -1.1920928e-07, -1.19209275e-07, 1.7763566e-15, 0.9999999, -3.6415315e-14, 0.32400388, 0.78568023)
+bone_idx = 1
+
+[node name="Bip001 Footsteps" parent="Perro1/animated low poly dog game ready/Object_4/Skeleton3D/Bip001 Footsteps" index="0" unique_id=608917757]
+transform = Transform3D(1.0728838e-06, 2.8212995e-07, -1.0000001, 1.0000002, -4.3711392e-08, 1.0728837e-06, -4.3711097e-08, -1.0000001, -2.8213e-07, 3.8146972e-08, 7.6293944e-08, -0.78336835)
+
+[node name="Object_7" parent="Perro1/animated low poly dog game ready/Object_4/Skeleton3D" index="1" unique_id=1188513140]
+surface_material_override/0 = SubResource("StandardMaterial3D_hmx28")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=333806614]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.26281738, 0)
+shape = SubResource("BoxShape3D_huu3x")
+
+[editable path="Perro1"]
