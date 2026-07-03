@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cosk0emkypwge"]
+
+[node name="Control" type="Control" unique_id=420474026]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1816769585]
+layout_mode = 0
+offset_right = 1148.0
+offset_bottom = 648.0
+color = Color(0.07774595, 9.602085e-06, 0.35336643, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=355971852]
+layout_mode = 0
+offset_right = 1146.0
+offset_bottom = 643.0
