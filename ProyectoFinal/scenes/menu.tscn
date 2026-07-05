@@ -1,11 +1,111 @@
 [gd_scene format=3 uid="uid://d3s5mfjgwalsp"]
 
 [ext_resource type="Script" uid="uid://cso00gn0ena7i" path="res://ProyectoFinal/scripts/Menu.gd" id="1_3cv5f"]
+[ext_resource type="AudioStream" uid="uid://dt86ud7ncretc" path="res://assets/Models/MusicaYSonidosGodotDesde0/Musica/musica-inicio.wav" id="2_46c3f"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_46c3f"]
-font_size = 86
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_yj0cd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_46c3f"]
+bg_color = Color(0.29803923, 1, 0.33333334, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 40
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 40
+shadow_color = Color(0.654902, 0.654902, 0.654902, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tir4x"]
+bg_color = Color(0.21568628, 0.6, 0.6, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.8039216, 0.19215687, 0.8039216, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 40
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 40
+shadow_color = Color(0.7490196, 1, 0.72156864, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(-5, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yj0cd"]
+bg_color = Color(0.043137256, 0.7176471, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 40
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 40
+shadow_color = Color(0.6156863, 0.6156863, 0.6156863, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gg5p4"]
+bg_color = Color(0.9882353, 0, 0.2509804, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.9764706, 0.9764706, 0.9764706, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 40
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 40
+shadow_color = Color(0.78039217, 0.78039217, 0.78039217, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s4q6a"]
+bg_color = Color(0.8784314, 0.7019608, 0.21960784, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 40
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 40
+shadow_color = Color(0.56078434, 0.56078434, 0.56078434, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(-5, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rpe2t"]
+bg_color = Color(1, 0, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 40
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 40
+shadow_color = Color(0.67058825, 0.67058825, 0.67058825, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(-3, 10)
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_46c3f"]
+file = "res://assets/Models/cinematica/la cinematica1.ogv"
 
 [node name="Control" type="Control" unique_id=382808680]
+texture_filter = 6
+texture_repeat = 1
+material = SubResource("CanvasItemMaterial_yj0cd")
+use_parent_material = true
+clip_contents = true
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,7 +121,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.20502695, 0.2203415, 0.35891017, 1)
+color = Color(0.21960784, 0, 1, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=130564895]
 layout_mode = 1
@@ -30,12 +130,30 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 25
 
-[node name="Label" type="Label" parent="VBoxContainer" unique_id=1576367492]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer" unique_id=452358018]
 layout_mode = 2
-text = "Plataformero 3D"
-label_settings = SubResource("LabelSettings_46c3f")
+
+[node name="Label3" type="Label" parent="VBoxContainer" unique_id=338223766]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8980392, 0, 0.015686275, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.9764706, 0, 0)
+theme_override_font_sizes/font_size = 40
+text = "URUM"
 horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer" unique_id=725118907]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.64705884, 0.9529412, 0.9882353, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 30
+text = "La aventura del pequeño gato"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Button" type="Button" parent="." unique_id=2098999996]
 layout_mode = 1
@@ -44,13 +162,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -234.5
-offset_top = -49.5
-offset_right = 234.5
-offset_bottom = 49.5
+offset_left = -9.0
+offset_top = 229.0
+offset_right = 230.0
+offset_bottom = 291.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Jugar"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_46c3f")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tir4x")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yj0cd")
+text = " ▶  Jugar"
 
 [node name="Button2" type="Button" parent="." unique_id=399058712]
 layout_mode = 1
@@ -59,13 +182,32 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -233.0
-offset_top = 87.0
-offset_right = 236.0
-offset_bottom = 186.0
+offset_left = -327.0
+offset_top = 230.0
+offset_right = -88.0
+offset_bottom = 288.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Salir"
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_gg5p4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s4q6a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rpe2t")
+text = "⎋ Salir"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=499001535]
+stream = ExtResource("2_46c3f")
+volume_db = -2.916
+autoplay = true
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=169396015]
+layout_mode = 0
+offset_left = 199.0
+offset_top = 182.0
+offset_right = 947.0
+offset_bottom = 506.0
+stream = SubResource("VideoStreamTheora_46c3f")
+autoplay = true
+expand = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -33,6 +33,7 @@
 [ext_resource type="ArrayMesh" uid="uid://bydeflhp4hj23" path="res://assets/Models/OBJ format/block-grass-overhang-large-slope-steep.obj" id="26_tk8qp"]
 [ext_resource type="ArrayMesh" uid="uid://c576r0i2xxsg3" path="res://assets/Models/OBJ format/block-grass-overhang-corner.obj" id="29_tk8qp"]
 [ext_resource type="ArrayMesh" uid="uid://cx54b8tnd2x34" path="res://assets/Models/OBJ format/block-grass-overhang-large-slope-narrow.obj" id="30_wgde7"]
+[ext_resource type="AudioStream" uid="uid://bmakp3ca4yhg1" path="res://assets/Models/MusicaYSonidosGodotDesde0/Musica/musica-camino.wav" id="34_qcomq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_clcmh"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -348,7 +349,7 @@ transform = Transform3D(-0.20946229, 0, -0.3466274, 0, 0.405, 0, 0.3466274, 0, -
 punto_a = NodePath("../Punto A")
 punto_b = NodePath("../Punto B")
 
-[node name="Skeleton3D" parent="Objetos/_Perro/CharacterBody3D/Perro1/animated low poly dog game ready/Object_4" parent_id_path=PackedInt32Array(2086185163, 1024811378, 1033505175) index="2" unique_id=1716112499]
+[node name="Skeleton3D" parent="Objetos/_Perro/CharacterBody3D/Perro1/animated low poly dog game ready/Object_4" parent_id_path=PackedInt32Array(2086185163, 1024811378, 387384527) index="2" unique_id=392694540]
 bones/2/rotation = Quaternion(-0.71322507, 1.6080261e-06, -1.4904897e-06, 0.70093507)
 bones/3/rotation = Quaternion(0.008681668, -0.00034345497, 0.039778113, 0.9991707)
 bones/4/rotation = Quaternion(0.008485661, -0.0003767781, -0.12212757, 0.99247813)
@@ -390,7 +391,7 @@ bones/36/rotation = Quaternion(-1.9200515e-08, -2.0339903e-07, 0.104876995, 0.99
 bones/37/position = Vector3(0.32398653, -3.5762787e-07, -5.482682e-07)
 bones/37/rotation = Quaternion(-0.70738876, -0.7068248, -2.384186e-07, 1.491979e-06)
 
-[node name="Bip001 Footsteps" parent="Objetos/_Perro/CharacterBody3D/Perro1/animated low poly dog game ready/Object_4/Skeleton3D/Bip001 Footsteps" parent_id_path=PackedInt32Array(2086185163, 1024811378, 930722561) index="0" unique_id=608917757]
+[node name="Bip001 Footsteps" parent="Objetos/_Perro/CharacterBody3D/Perro1/animated low poly dog game ready/Object_4/Skeleton3D/Bip001 Footsteps" parent_id_path=PackedInt32Array(2086185163, 1024811378, 1437620200) index="0" unique_id=136414868]
 transform = Transform3D(1.1026862e-06, 2.8212995e-07, -1.0000001, 1.0000002, -4.3711392e-08, 1.102686e-06, -4.3711086e-08, -1.0000001, -2.8213e-07, 3.8146972e-08, 7.6293944e-08, -0.78450286)
 
 [node name="BlockGrassOverhangLargeTall5" type="MeshInstance3D" parent="Objetos" unique_id=1242258088]
@@ -1185,7 +1186,7 @@ shape = SubResource("ConvexPolygonShape3D_fv1w1")
 [node name="CharacterBody3D" parent="." unique_id=822700781 instance=ExtResource("1_0qhwx")]
 transform = Transform3D(0.88, 0, 0, 0, 0.88, 0, 0, 0, 0.88, 21.67889, 0.25654662, -1.886282)
 
-[node name="Skeleton3D" parent="CharacterBody3D/animations/Armature" parent_id_path=PackedInt32Array(822700781, 1125176049, 1387880840) index="0" unique_id=1961117277]
+[node name="Skeleton3D" parent="CharacterBody3D/animations/Armature" parent_id_path=PackedInt32Array(822700781, 1125176049, 171616138) index="0" unique_id=1943677120]
 bones/0/rotation = Quaternion(0.13212182, -0.019132327, 0.0014348644, 0.9910478)
 bones/1/rotation = Quaternion(0.16889049, 0.0091564, -0.007736518, 0.98556197)
 bones/2/rotation = Quaternion(0.077245146, 0.009931999, -0.0021239088, 0.9969604)
@@ -1208,7 +1209,7 @@ bones/32/rotation = Quaternion(-0.23447548, 0.26073182, 0.93486494, 0.055388577)
 bones/33/rotation = Quaternion(-0.49355662, 0.017166113, -0.050921768, 0.868052)
 bones/34/rotation = Quaternion(0.6470185, 0.25996906, 0.10398208, 0.7092045)
 
-[node name="AnimationPlayer" parent="CharacterBody3D/animations" parent_id_path=PackedInt32Array(822700781, 1125176049) index="1" unique_id=432365183]
+[node name="AnimationPlayer" parent="CharacterBody3D/animations" parent_id_path=PackedInt32Array(822700781, 1125176049) index="1" unique_id=1706971145]
 autoplay = &"Armature|CAMINANDO"
 
 [node name="pivot" parent="CharacterBody3D" index="2" unique_id=1546305113]
@@ -1265,6 +1266,10 @@ transform = Transform3D(1.7087834, -0.14588833, 0.0012374982, 0.14589359, 1.7087
 
 [node name="Area3D8" parent="." unique_id=1739414457 instance=ExtResource("21_clcmh")]
 transform = Transform3D(1.7087834, -0.14588833, 0.0012374982, 0.14589359, 1.7087221, -0.014494241, 0, 0.014546974, 1.7149388, 7.2519093, 16.236584, -6.034125)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=536096678]
+stream = ExtResource("34_qcomq")
+autoplay = true
 
 [editable path="Objetos/Perro 2/CharacterBody3D"]
 [editable path="Objetos/Perro 2/CharacterBody3D/Perro1"]
