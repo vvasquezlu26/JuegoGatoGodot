@@ -4,7 +4,8 @@ class_name jugador
 var coins: int = 0
 
 const SPEED = 6.5
-const JUMP_VELOCITY = 7.5
+const JUMP_VELOCITY = 6.5
+const GRAVITY = 20.0
 
 @export var sens: float = 0.001
 
@@ -25,8 +26,8 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 		ComprobarAltura()
-
-
+		
+		
 	if Input.is_action_just_pressed("saltar") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		if animation_player.current_animation != "Armature|1SALTAR":
@@ -64,10 +65,11 @@ func _physics_process(delta: float) -> void:
 func ComprobarAltura():
 	if global_position.y <= -15.0:
 		Die()
-func Die():
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	get_tree().change_scene_to_file("res://ProyectoFinal/scenes/Caída.tscn")
 
+
+func Die():
+	get_tree().reload_current_scene()
+	
 
 func AgregarMoneda():
 	coins += 1
