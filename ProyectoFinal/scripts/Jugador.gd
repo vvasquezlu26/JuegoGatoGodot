@@ -64,11 +64,10 @@ func _physics_process(delta: float) -> void:
 func ComprobarAltura():
 	if global_position.y <= -15.0:
 		Die()
-
-
 func Die():
-	get_tree().reload_current_scene()
-	
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	get_tree().change_scene_to_file("res://ProyectoFinal/scenes/Caída.tscn")
+
 
 func AgregarMoneda():
 	coins += 1
