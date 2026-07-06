@@ -42,3 +42,23 @@ func _physics_process(delta):
 			destino = punto_b
 
 	move_and_slide()
+
+
+func _on_area_3d_body_exited(body: Node3D) -> void:
+	print("Algo entró1: ", body.name)
+
+	if body is jugador:
+		print("¡Es el jugador!")
+		body.QuitarVida()
+
+func _on_area_3d_body_entered(body):
+	print("Algo entró2: ", body.name)
+
+	if body is jugador:
+		print("¡Es el jugador!")
+		body.QuitarVida()
+	if body is jugador:
+		body.QuitarVida()
+	print(body)
+	print(body.get_class())
+	print(body.name)

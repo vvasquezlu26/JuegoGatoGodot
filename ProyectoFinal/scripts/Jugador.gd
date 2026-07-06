@@ -3,6 +3,32 @@ class_name jugador
 @onready var animation_player: AnimationPlayer =$animations/AnimationPlayer
 var coins: int = 0
 
+# Vida
+var vidas := 3
+var invencible := false
+
+func ActualizarVidas():
+	$CanvasLayer/Control/HBoxContainer/TextureRect.visible = vidas >= 1
+	$CanvasLayer/Control/HBoxContainer/TextureRect2.visible = vidas >= 2
+	$CanvasLayer/Control/HBoxContainer/TextureRect3.visible = vidas >= 3
+
+# Quitar vida
+func QuitarVida():
+	if invencible:
+		return
+	invencible = true
+	vidas -= 1
+	ActualizarVidas()
+	print("Vidas restantes: ", vidas)
+
+	if vidas <= 0:
+		Die()
+		return
+
+	await get_tree().create_timer(1.5).timeout
+	invencible = false
+
+
 const SPEED = 6.5
 const JUMP_VELOCITY = 6.5
 const GRAVITY = 20.0
@@ -10,10 +36,9 @@ const GRAVITY = 20.0
 @export var sens: float = 0.001
 
 func _ready() -> void:
-	print("aqui ver error",animation_player)
-	print("SOY EL PERSONAJE VERDE")
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	$CanvasLayer/Control/Label.text = "Coins: " + str(coins)
+	ActualizarVidas()
 
 func _input(event):
 	if event.is_action_pressed("salir"):
@@ -68,7 +93,8 @@ func ComprobarAltura():
 
 
 func Die():
-	get_tree().reload_current_scene()
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	get_tree().change_scene_to_file("res://ProyectoFinal/scenes/Caída.tscn"	)
 	
 
 func AgregarMoneda():

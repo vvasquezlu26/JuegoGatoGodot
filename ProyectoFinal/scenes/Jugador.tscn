@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://paxbasuxb30d"]
 
 [ext_resource type="Script" uid="uid://slqmy4kdq5ek" path="res://ProyectoFinal/scripts/Jugador.gd" id="1_nmtsd"]
-[ext_resource type="PackedScene" path="res://assets/perro/animations.fbx" id="2_nmtsd"]
+[ext_resource type="PackedScene" uid="uid://1owm2y15w26u" path="res://assets/perro/animations.fbx" id="2_nmtsd"]
 [ext_resource type="Script" uid="uid://dqca417frdk4k" path="res://ProyectoFinal/scripts/Camera1.gd" id="3_p4kgv"]
+[ext_resource type="Texture2D" uid="uid://b6r4tqcg5rsux" path="res://assets/Previews/heart.png" id="4_p4kgv"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bkejx"]
 radius = 1.1450195
@@ -17,7 +18,7 @@ script = ExtResource("1_nmtsd")
 [node name="animations" parent="." unique_id=1125176049 instance=ExtResource("2_nmtsd")]
 transform = Transform3D(-52.533062, 0, 0.45111433, 0, 52.535, 0, -0.45111433, 0, -52.533062, -0.3469208, 0.33154678, 0)
 
-[node name="Skeleton3D" parent="animations/Armature" parent_id_path=PackedInt32Array(1125176049, 1090708201) index="0" unique_id=2058956418]
+[node name="Skeleton3D" parent="animations/Armature" parent_id_path=PackedInt32Array(1125176049, 1387880840) index="0" unique_id=1961117277]
 bones/0/position = Vector3(3.4183264e-05, 0.009354399, -0.0010101758)
 bones/0/rotation = Quaternion(0.13212182, -0.019132322, 0.0014349631, 0.9910478)
 bones/1/rotation = Quaternion(0.16889055, 0.009156363, -0.007736586, 0.98556197)
@@ -83,5 +84,24 @@ offset_right = 40.0
 offset_bottom = 23.0
 text = "Coins"
 label_settings = SubResource("LabelSettings_n7ifo")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control" unique_id=978874804]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 81.0
+offset_right = 185.0
+offset_bottom = 135.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/HBoxContainer" unique_id=840675988]
+layout_mode = 2
+texture = ExtResource("4_p4kgv")
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control/HBoxContainer" unique_id=2118941911]
+layout_mode = 2
+texture = ExtResource("4_p4kgv")
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/Control/HBoxContainer" unique_id=981949110]
+layout_mode = 2
+texture = ExtResource("4_p4kgv")
 
 [editable path="animations"]

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dgf6mihdo4awg"]
+
+[ext_resource type="Script" uid="uid://dmuhdvwobmdk8" path="res://ProyectoFinal/scripts/cinematica.gd" id="1_xpgcu"]
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_3rvn4"]
+file = "res://assets/Models/cinematica/cinematica.ogv"
+
+[node name="Control" type="Control" unique_id=274551967]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1150.0
+offset_bottom = 651.0
+script = ExtResource("1_xpgcu")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1397406899]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 1.0
+offset_right = 1153.0
+offset_bottom = 650.0
+color = Color(0.14901961, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2023288078]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 1.0
+offset_right = 44.0
+offset_bottom = 41.0
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1286653056]
+layout_mode = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=2140840860]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 1.0
+offset_right = 1154.0
+offset_bottom = 658.0
+stream = SubResource("VideoStreamTheora_3rvn4")
+autoplay = true
+expand = true
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

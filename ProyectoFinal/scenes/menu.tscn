@@ -1,9 +1,101 @@
 [gd_scene format=3 uid="uid://d3s5mfjgwalsp"]
 
 [ext_resource type="Script" uid="uid://cso00gn0ena7i" path="res://ProyectoFinal/scripts/Menu.gd" id="1_3cv5f"]
+[ext_resource type="AudioStream" uid="uid://6mepoq8ibauv" path="res://assets/Models/musica/musica-menu.wav" id="2_46c3f"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_46c3f"]
 font_size = 86
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3cv5f"]
+bg_color = Color(0.1882353, 0.7372549, 0.08627451, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 0.21176471, 0.16470589, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 30
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 30
+shadow_color = Color(0.4862745, 0.4862745, 0.4862745, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yj0cd"]
+bg_color = Color(0.32156864, 1, 0.19215687, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 20
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 20
+shadow_color = Color(1, 1, 1, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(-5, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_46c3f"]
+bg_color = Color(0, 0.95686275, 0.25490198, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_color = Color(0.5803922, 0.5803922, 0.5803922, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 30
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 30
+shadow_color = Color(0.557753, 0.5577531, 0.5577531, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(-3, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tir4x"]
+bg_color = Color(1, 0.29411766, 0.23137255, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 30
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 30
+shadow_color = Color(0.54901963, 0.54901963, 0.54901963, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gg5p4"]
+bg_color = Color(1, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 20
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 20
+shadow_color = Color(1, 1, 1, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(-5, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s4q6a"]
+bg_color = Color(1, 0.23921569, 0.18431373, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 25
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 25
+shadow_color = Color(0.6039216, 0.6039216, 0.6039216, 0.6)
+shadow_size = 10
+shadow_offset = Vector2(-3, 10)
 
 [node name="Control" type="Control" unique_id=382808680]
 layout_mode = 3
@@ -21,7 +113,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.20502695, 0.2203415, 0.35891017, 1)
+color = Color(0.20392157, 0.21960784, 1, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=130564895]
 layout_mode = 1
@@ -33,9 +125,19 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=1576367492]
 layout_mode = 2
-text = "Plataformero 3D"
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "🐱 URUM"
 label_settings = SubResource("LabelSettings_46c3f")
 horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer" unique_id=312685981]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.21176471, 1, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "La aventura del pequeño gato          "
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Button" type="Button" parent="." unique_id=2098999996]
 layout_mode = 1
@@ -44,13 +146,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -234.5
-offset_top = -49.5
-offset_right = 234.5
-offset_bottom = 49.5
+offset_left = -2.0
+offset_top = 189.0
+offset_right = 172.0
+offset_bottom = 246.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Jugar"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_3cv5f")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yj0cd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_46c3f")
+text = "▶ Jugar"
 
 [node name="Button2" type="Button" parent="." unique_id=399058712]
 layout_mode = 1
@@ -59,13 +165,34 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -233.0
-offset_top = 87.0
-offset_right = 236.0
-offset_bottom = 186.0
+offset_left = -229.0
+offset_top = 190.0
+offset_right = -37.0
+offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Salir"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_tir4x")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gg5p4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s4q6a")
+text = "⏻ Salir"
+
+[node name="HSeparator" type="HSeparator" parent="." unique_id=915448215]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 1145.0
+offset_bottom = 342.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1252120898]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 201.0
+offset_right = 843.0
+offset_bottom = 429.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=80306680]
+stream = ExtResource("2_46c3f")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
